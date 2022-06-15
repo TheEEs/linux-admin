@@ -1,4 +1,4 @@
-> "Khi một người đàn ông yêu nhiều hơn 1 cô gái, người duy nhất anh ta yêu chính là bản thân mình"
+> "Khi một người đàn ông yêu nhiều hơn 1 cô gái, người duy nhất anh ta yêu chính là bản thân mình" - ở đâu đó quên mất rồi
 # Chương 11. init
 
 Chương này mô tả **init** - tiến trình cấp người dùng đầu tiên được kernel khởi động. **init** có nhiều trách nhiệm quan trọng, như là khởi tạo **gettty** (để người dùng có thể login), triển khai các cấp độ chạy - *run levels*, và thu nhận các tiến trình mồ côi. Chương này sẽ giải thích làm thế nào để cấu hình **init** và cách để ứng dụng các cấp độ chạy khác nhau.
