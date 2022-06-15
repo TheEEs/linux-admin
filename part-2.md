@@ -19,7 +19,7 @@ Mặc dù các phần trên cũng đuợc gọi là các filesystem - hệ thố
 
 Hệ thống tệp tin trong Unix nhóm các file theo mục đích sử dụng, ví dụ tất cả các lệnh vào một chỗ, các file dữ liệu ở một chỗ khác. Một phương pháp khác đó là nhóm các file dựa theo vào phần mềm mà các file đó thuộc về, ví dụ tất cả các file của Emacs sẽ ở một chỗ, của TeX sẽ ở một chỗ khác. Cách sắp xếp file thứ hai đôi khi gây khó khắn trong việc chia sẻ file , bởi vì trong một thư mục chứa các file liên quan tới một phần mềm sẽ chứa cả các dữ liệu bất biến và khả biến. Đôi khi đây cũng là một cơn ác mộng trong việc tìm kiếm file , giả sử như muốn tìm hướng dẫn sử dụng cho một chương trình nào đó , bạn sẽ phải lướt qua một số lượng khổng lồ các thư mục của các chương trình khác nhau chỉ để tìm một file hướng dẫn cỏn con. Việc này đã có thể dễ hơn nếu như tất cả các file hướng dẫn sử dụng đều nằm trong cùng một chỗ.
 
-##2.2. Thư mục root - "/"
+## 2.2. Thư mục root - "/"
 Thường thì thư mục này rất bé vì nó chứa những file rất quan trọng , và vì một thư mục nhỏ ít bị thay đổi cũng sẽ làm tăng khả năng chống hư hại hệ thống. Một thư mục root bị hỏng, đồng nghĩa với việc hệ thống sẽ không thể boot đuợc ngoại trừ một vài phương pháp đặc biệt như boot từ ổ đĩa mềm. Chắc bạn bạn sẽ không muốn nó bị hỏng đâu.
 Thư mục root thường không chứa bất kỳ file nào, ngoại trừ trên các hệ thống cũ, thì file boot chuẩn của Linux (*/vmliuz*) đuợc giữ ở đây. Ngày nay rất nhiều các bản phân phối đã đưa file boot chuẩn vào trong thư mục */boot*. Dưới đây là danh sách các thư mục con của root.
 * **/bin**: Các lệnh sử dụng trong quá trình khởi động, có thể đuợc dùng bởi người dùng sau khi khởi động xong.
@@ -34,7 +34,7 @@ Thư mục root thường không chứa bất kỳ file nào, ngoại trừ trê
 * **/mnt**: Các điểm kết nối (*mount point*) cho các kết nối tạm thời đuợc tạo ra bởi người quản trị hệ thống. Các chương trình không nhất thiết phải mount các filesystem mà chúng thấy vào */mnt* một cách máy móc. */mnt* cũng đuợc chia ra thành nhiều các thư mục con, ví dụ */mnt/dosa* có thể là một đĩa mềm sử dụng định dạng MS-DOS.
 * */proc , /usr, /var, /home* : Các điểm kết nối của các filesystem khác nhau. Mặc dù */proc* không thực sự tồn tại, nó vẫn sẽ đuợc đề cập. Chúng ta sẽ nói tới nó ở các chương sau.
 
-##2.3. Thư mục /etc
+## 2.3. Thư mục /etc
 Thư mục này chứa rất nhiều file. Một vài trong số chúng sẽ đuợc mô tả ngay dưới đây. Với các file khác , bạn nên xác định xem chúng thuộc về phần mềm nào và đọc manual của phần mềm đó để biết đuợc file đó có công dụng gì. Nhiều file cấu hình mạng cũng đuợc nằm trong */etc* :
 * **/etc/rc hoặc /etc/rc.d hoặc /etc/rc?.d**: Các đoạn kịch bản hoặc các thư mục chứa các đoạn kịch bản sẽ được thực khi tại lúc khởi động hoặc khi thay đổi run level.
 * **/etc/passwd**: Cơ sở dữ liệu về người dùng , các fields bao gồm user name , tên thực, thư mục home, và các thông tin khác của các user khác.
@@ -97,7 +97,7 @@ Hệ thống tệp tin */usr* thường lớn, bởi vì các chương trình đ
 * */usr/lib**: Các file dữ liệu bất biến dùng cho các chương trình vá các hệ thống con (*subsystems*). Cái tên **lib** đến từ chữ **library** bởi vì ban đầu các thư viện lập trình đuợc đặt tại đây.
 * **/usr/local**: Đây là nơi để cài đặt các phần mềm cục bộ vào lưu trữ các file cũng cục bộ nốt. Các bản phân phối Linux tuân theo FHS thường sẽ không ghi bất kỳ thứ gì vào trong này. Nó đuợc dành riêng cho người quản trị cục bộ. Bằng cách này anh/cô ta có thể tuyệt đối chắc chắn rằng không có sự cập nhật hay nâng cấp nào sẽ ảnh hưởng tới các phần mềm đuợc anh/cô ta cài đặt trong đây.
 
-##2.6 Hệ thống tệp tin /var
+## 2.6 Hệ thống tệp tin /var
 */var* chứa các dữ liệu khả biến khi hệ thống đang chạy bình thường. Filesystem này đuợc chỉ định riêng cho mỗi hệ thống, nó không nên đuợc chia sẻ giữa các máy với nhau.
 
 * **/var/cache/man** : Các file manual trước khi đựoc đọc, cần phải đuợc định dạng. Một vài file đã có các bản định dạng trước đó , nhưng nếu chưa , thì file manual đó sẽ đuợc định dạng và bản định dạng sẽ được cache tại đây. Ở lần đọc tiếp theo, file manual đó không cần phải đuợc định dạng lại nữa.
@@ -111,7 +111,7 @@ Hệ thống tệp tin */usr* thường lớn, bởi vì các chương trình đ
 * **/var/spool**: Thư mục chứa tin tức, các hàng đợi máy in, và các công việc cần tới các hàng đợi phần mềm. Mỗi một mục sẽ có một thư mục riêng nằm trong */var/spool*, ví dụ các tin tức mới có thể đuợc lưu tại */var/spool/news*.
 * **/var/tmp**: Các file tạm thời có kích thước lớn và cần phải đuợc tồn tại trong một khoảng thời gian dài hơn khoảng thời gian chúng đuợc cho phép ở */tmp*. Nhưng các file đã quá cũ cũng sẽ được người quản trị để tâm đến và xóa đi.
 
-##2.7. /proc
+## 2.7. /proc
 Đây là một hệ thống tệp tin không có thật, bạn có thể hiểu nó như  thế. Bởi vì nó không tồn tại trên đĩa , nó đuợc kernel tạo ra trong RAM. Nó đuợc sử dụng để cung cấp thông tin về hệ thống (trước đây chỉ là cung cấp thông tin về các tiến trình , bạn nhìn cái tên nó thì biết - **proc**esses). Các phần quan trọng trong */proc* sẽ đuợc liệt kệ dưới đây.
 
 * **/proc/1**: Chứa thông tin về tiến trình mang Process ID là 1. Mỗi tiến trình sẽ sở hữu một thư mục nằm trong */proc* , với tên thư mục là process id của tiến trình đó.
