@@ -1,4 +1,5 @@
 # Chương 8. Đăng nhập và đăng xuất.
+
 > **UNIX đơn giản, nó chỉ cần một thiên tài để hiểu rằng nó đơn giản** - Dennis Ritchie.
 
 Chương này trình bày về những điều xảy ra  khi một người dùng đăng nhập hoặc đăng xuất. Những sự tương tác của các tiến trình nền, các log files, các file cấu hình và những thứ tương tự cũng sẽ đuợc mô tả khá chi tiết.

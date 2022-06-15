@@ -1,7 +1,6 @@
+# Chương 3. Các tiện ích quản lý phần cứng.
 > **" Những người hiểu biết thì lên tiếng, những kẻ khôn ngoan sẽ lắng nghe. "** -  Jimi Hendrix.
 
-
-# Các tiện ích quản lý phần cứng.
 Chương này khá ngắn , nó trình bày về hai đoạn kịch bản có sẵn trong hệ thống là **MAKEDEV** và **mknod** , kèm theo đó là liệt kê một vài trình tiện ích khá hữu dụng. Bạn có thể tìm thấy manual của các tiện ích đó trên Internet hoặc cac manual có sẵn trong hệ thống. 
 ### 1. MAKEDEV
 

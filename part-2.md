@@ -1,4 +1,4 @@
-# Chương 2. Tổng quan về cây thư mục
+# Chương 2. Tổng quan về cây thư mục.
 
 Chương này mô tả các phần quan trọng của cây thư mục trong Linux , dựa trên **Tiêu chuẩn phân cấp cây thư mục** - *FileSystem Hierachy Standard - FHS*. Nó sẽ giúp bạn có cái nhìn tổng quát về cây thư mục bằng cách chia cây thư mục thành các phần nhỏ hơn , và đồng thời cũng cho bạn thấy đuợc động cơ tại sao lại có sự chia nhỏ này. Không phải bản phân phối Linux nào cũng tuân theo FHS một cách mù quáng, nhưng những mô tả dưới đây sẽ đủ để bạn có một cái nhìn tổng quát chung nhất.
 

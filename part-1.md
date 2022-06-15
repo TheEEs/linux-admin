@@ -1,4 +1,4 @@
-# Chương 1. Tổng quan một hệ thống Linux
+# Chương 1. Tổng quan một hệ thống Linux.
 >Thiên chúa thấy mọi sự người đã làm, và thấy rằng nó đuợc làm rất tốt. - *Bible King James Version. Genesis 1:31*
 
 Chương này cho chúng ta một cái nhìn tổng quát về một hệ thống Linux. Đầu tiên , các dịch vụ chính đuợc cung cấp bởi hệ điều hành sẽ đuợc miêu tả . Sau đó , các chương trình mà triển khai các dịch vụ đó cũng sẽ đuợc đề cập qua một chút. Mục đích của chương này chỉ là cho chúng ta thấy đuợc toàn cảnh của một hệ thống , những phần chi tiết hơn sẽ đuợc đi sâu ở các mục sau.

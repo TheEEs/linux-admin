@@ -1,6 +1,6 @@
-> **"Bước đi trên thiên đạo, người thống trị tất cả"** - Kamen Rider Kabuto.
-
 # Chương 5. Quản lý bộ nhớ.
+
+> **"Bước đi trên thiên đạo, người thống trị tất cả"** - Kamen Rider Kabuto.
 
 Phần này trình bày về tính năng quản lý bộ nhớ trong Linux, bao gồm **bộ nhớ ảo** và **disk buffer cache**. Mục đích, những công việc và những thứ người quản trị cần xem xét cũng sẽ đuợc miêu tả.
 

@@ -1,6 +1,7 @@
+# Chương 4. Sử dụng đĩa và các thiết bị lưu trữ khác.
+
 > **"On a clear disk you can seek forever. "**
 
-# Chương 4. Sử dụng đĩa và các thiết bị lưu trữ khác
 Khi cài đặt hoặc nâng cấp hệ thống, bạn cần làm một số việc với đĩa của bạn. Bạn phải tạo ra các hệ thống tệp tin trên đĩa mà ở đó các tệp tin có thể đuợc lưu trữ , đồng thời dành ra một vài không gian riêng trên đĩa cho những phần khác của hệ thống.
 
 Chương này giải thích tất cả những công việc bạn có thể sẽ cần làm sau khi cài đặt hoặc nâng cấp hệ thống. Thông thường, một khi bạn đã thiết đặt xong hệ thống của mình, bạn sẽ không cần phải lặp lại những công việc này trong tương lai nữa (*ngoại trừ với các ổ đĩa mềm - floppy disks*). Bạn có thể sẽ cần xem lại bài viết này nếu như bạn thêm vào một ổ đĩa mới , hoặc muốn làm cho ổ đĩa hoạt động trơn tru trở lại.

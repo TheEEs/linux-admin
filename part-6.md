@@ -1,6 +1,7 @@
+# Chương 6. Giám sát hệ thống.
+
 > **"That's Hall Monitor to you!"**
 
-# Chương 6. Giám sát hệ thống.
 
 Một trong những trách nhiệm quan trọng nhất của người quản trị hệ thống , đó chính là theo dõi hệ thống của anh/cô ta. Với tư cách một sysadmin, bạn sẽ cần phải biết được những gì đang xảy ra trên hệ thống của mình tại một thời điểm cho trước. Bao nhiêu phần trăm tài nguyên hệ thống đang được sử dụng, lệnh nào đang được chạy , ai đã và đang login ? Chương này sẽ bao quát cho bạn thấy làm thế nào bạn có thể giám sát hệ thống của mình, và trong một vài trường hợp, làm thế nào bạn có thể giải quyết những vấn đề có nguy cơ phát sinh.
 

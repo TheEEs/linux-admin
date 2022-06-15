@@ -1,3 +1,5 @@
+# Chương 4.2. Sử dụng đĩa và các thiết bị lưu trữ khác.
+
 > **"Giữa một thằng to mồm và một con mụ dối trá thì thằng to mồm xem ra vẫn có giá hơn. "** - Ai đó - Bầu cử tổng thống Mỹ.
 
 ### 4.8.5. Mounting và unmounting.
