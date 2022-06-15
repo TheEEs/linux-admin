@@ -4,7 +4,8 @@
 
 Trước khi một filesystem có thể đuợc sử dụng, nó cần phải đuợc *mounted*. Sau đó hệ điều hành sẽ tiến hành thống kê kiểm thử lại mọi thứ để chắc rằng rằng chúng hoạt động tốt. Do tất cả các file trong UNIX đều nằm trong một cây thư mục duy nhất , việc mount một filesystem nào đó sẽ khiến cho toàn bộ filesystem đó chỉ trông như một thư mục con của cây thư mục.
 Ảnh dưới đây cho thấy 3 filesystem riêng biệt, hai filesystem phía dưới đuợc mount phía dưới */home* và */usr*.
-![Hình ảnh không thể tìm thấy](http://sv1.upsieutoc.com/2016/11/21/screenshotx.png)
+
+![Hình ảnh không thể tìm thấy](https://github.com/TheEEs/linux-admin/blob/master/images/4.2.1.png?raw=true)
 
 Việc mount những filesystem có thể đuợc thực hiện thông qua lệnh **mount**:
 ```bash
@@ -223,7 +224,7 @@ Nhân tiện, bạn nên lưu ý rằng đôi khi sự đo lường là không c
 Tôi đã từng có một ổ cứng 10GB. Bây giờ tôi sử dụng một ổ 30GB. Tôi sẽ giải thích cách thức và lý do tại sao tôi lại phân vùng những đĩa này.
 
 Đầu tiên, tôi tạo một phân vùng */boot* có dung lượng 128MB. Dung lượng này rõ ràng là lớn hơn những gì tôi cần, nhưng cũng vừa đủ lớn để cho tôi thêm không gian nếu có biến cố trong tương lai. Tôi tạo ra một phân vùng */boot* riêng biệt là để đảm bảo rằng filesystem này sẽ không bao giờ bị làm đầy, do đó nó sẽ có thể boot đuợc. Sau đó tôi tạo một phân vùng */var* 5GB. Do */var* là nơi mà các logfiles và email đuợc lưu , nên tôi muốn nó độc lập với phân vùng root. Tiếp đến, tôi tạo một phân vùng */home* 15GB. Nó rất tiện dụng trong trường hợp hệ thống bị sập. Nếu như tôi phải cài đặt lại Linux từ đầu, tôi sẽ nói cho trình cài đặt rằng *"Ê, không đựoc format cái phân vùng này*, phân vùng */home* cũ sau đó sẽ đuợc mount lại mà không có dữ liệu nào bị mất đi cả. Cuối cùng, do tôi có 512MB RAM, tôi sẽ tạo một phân vùng swap có dung lượng 1GB. Cuối cùng, tôi còn lại đúng 9GB, tôi sẽ dùng nó cho root filesystem. Tôi lại sử dụng ổ đĩa 10GB cũ , tôi sẽ tạo một phân vùng 8GB dùng cho filesystem */usr*  và chừa lại 2GB. Tôi dự định sẽ dùng 2GB trống này trong tương lai mặc dù tôi chưa nghĩ ra cách để dùng nó. Cuối cùng, bạn có thể thấy bảng phân vùng của tôi sẽ trông như sau:
-![Hình ảnh không tìm thấy](http://sv1.upsieutoc.com/2016/12/05/Screenshotfrom2016-12-0513-01-36.png)
+![Hình ảnh không tìm thấy](https://github.com/TheEEs/linux-admin/blob/master/images/4.2.2.png?raw=true)
 
 ### 4.10.5. Thêm nhiều không gian đĩa hơn cho Linux.
 Việc thêm không gian đĩa cho Linux rất dễ dàng, ít nhất là sau khi phần cứng đã đuợc cài đặt đúng cách. Bạn định dạng lại nó nếu cần thiết, sau đó tạo ra các phân vùng và các filesystem như tôi đã nói ở phần trên và bài viết trước , cuối cùng là thêm những dòng gợi ý hợp lý vào */etc/fstab* để filesystem của bạn có thể tự động đuợc mount.

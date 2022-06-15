@@ -6,7 +6,7 @@ Chương này trình bày về những điều xảy ra  khi một người dùn
 ## 8.1. Đăng nhập từ terminal.
 Bài viết đầu tiên trong series này đã mô tả về những gì xảy ra khi bạn đăng nhập qua một terminal. Đầu tiên, **init** sẽ đảm bảo rằng chương trình **getty** đuợc gọi lên để lắng nghe các kết nối từ terminal. **getty** sẽ lắng nghe, chờ đợi và nhận ra nhu cầu đăng nhập của người dùng. Khi nó nhận ra một người dùng, **getty** sẽ xuất ra một thông báo chào mừng (*đuợc lưu trữ tại /etc/issue*), dấu nhắc lệnh cũng xuất hiện để nhập username, sau khi đã nhập username, **getty** sẽ chạy chương trình **login**. Chương trình này nhận username như một tham số, sau đó nó sẽ yêu cầu người dùng nhập password. Nếu username và password đều trùng khớp, **login** sẽ khởi chạy shell đuợc cấu hình cho người dùng đó, nếu không nó sẽ thoát và tiến trình chạy nó sẽ bị hủy. **init** sẽ nhận ra tiến trình bị hủy đó, và khởi chạy lại một instance mới của **getty** để phục vụ cho phiên đăng nhập tiếp theo.
 
-![Hình ảnh không tìm thấy](https://s1.upanh123.com/2017/01/01/2016-12-30-111519_486x521_scrot9c95a.png).
+![Hình ảnh không tìm thấy](https://github.com/TheEEs/linux-admin/blob/master/images/8.1.png?raw=true).
 
 Có nhiều các phiên bản khác nhau của **getty** và **init** đuợc sử dụng, chúng đều có những ưu và nhược điểm. Biết về phiên bản hệ thống bạn đang sử dụng là một ý tưởng tốt. Bạn có thể không cần lo lắng về **getty**, nhưng **init** vẫn rất quan trọng.
 

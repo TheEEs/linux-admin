@@ -24,7 +24,7 @@ Ký tự đầu tiên ở cột đầu tiên , **c** , có nghĩa là file này 
 
 ## 4.2. Đĩa cứng.
 Section này giới thiệu các thuật ngữ có liên quan tới đĩa cứng. Nếu bạn đã biết trước, bạn có thể bỏ qua section này.
-![Hình ảnh không tìm thấy](http://sv1.upsieutoc.com/2016/11/16/hardisk.png)
+![Hình ảnh không tìm thấy](https://github.com/TheEEs/linux-admin/blob/master/images/4.1.png?raw=true)
 Hình trên mô tả những phần quan trọng trong ổ đĩa cứng. Một ổ cứng bao gồm một hoặc nhiều các đĩa nhôm tròn , gọi là các *platters*. Một hoặc cả hai bề mặt *(surface)* của *platter* đuợc phủ một lớp chất có từ tính dùng để ghi lại thông tin. Mỗi *surface* lại có một đầu (*head*) kiêm luôn hai chức năng đọc/ghi , có thể đọc hoặc thay đổi dữ liệu trên đĩa. Các *platters* xoay trên một trục chung , tốc độ điển hình là 5400 hoặc 7200 rpm (*rotations per minute*) , mặc dù các ổ đĩa hiệu suất cao hoặc các ổ đĩa cũ sẽ có tốc độ xoay khác nhau. *Head* sẽ di chuyển dọc theo bán kính của *platter*, chuyển động của đầu đọc/ghi kết hợp với vòng xoay của đĩa cứng cho phép *Head* truy cập đuợc mọi nơi trên bề mặt.
 
 CPU và ổ đĩa giao tiếp với nhau thông qua một *bộ điều khiển đĩa - disk controller*. Những phần còn lại của máy tính sẽ đỡ mệt hơn mỗi khi chúng muốn giao tiếp với ổ đĩa cứng , do những bộ điều khiển nằm trên mỗi loại ổ đĩa khác nhau có thể đuợc trừu tượng hóa vào một giao diện giao tiếp chung. Chính vì thế , máy tính chỉ cần nói "Ê đĩa, đưa cho tao mấy cái tao yêu cầu. Nhanh !" , thay vì gửi đi hoặc nhận về một chuỗi các tín hiệu điện tử phức tạp để di chuyển *head* đến vị trí thích hợp rồi đợi cho đĩa quay đến đúng vị trí cần đọc , ròi tiếp tục tiến hành các công việc khó nhai khác. (*Trên thực tế thì giao diện giao tiếp với các ổ đĩa vẫn phức tạp, nhưng như vậy vẫn đỡ hơn rất , rất nhiều nếu như không có nó*). Bộ điều khiển ổ đĩa cũng có thể thực hiện một vài hoạt động khác, như làm bộ nhớ đệm, hoặc tự động thay thế các bad sector.
@@ -157,7 +157,7 @@ OS/2, Minix, FreeBSD, NetBSD, Windows/NT, ...v....v..)*. Nhưng chủ yếu bở
 Số lượng phân vùng là một giới hạn khá khó chịu của ổ cứng. Để vuợt qua giới hạn này, phân vùng mở rộng (*extended partitions*) ra đời. Thủ thuật này cho phép một phân vùng chính thành nhiều phân vùng con. *Phân vùng chính* mà chúng ta đang nói tới chính là phân vùng extended. Những phân vùng con đuợc gọi là những *phân vùng logic*. Chúng hoạt động tương tự như những phân vùng chính, nhưng đuợc tạo ra theo một cách khác. Không có sự khác biệt nào về tốc độ giữa chúng. Bằng cách sử dụng phân vùng mở rộng, bạn có thể sở hữu tới 15 phân vùng trên một đĩa.
 
 Cấu trúc phân vùng của một đĩa cứng có thể trông giống như hình dưới. Đĩa đựoc chia thành 3 phân vùng chính. Một trong ba phân vùng chính lại đuợc chia thành hai phân vùng logic khác. Không phải phần nào của đĩa cũng đuợc phân vùng. Mỗi phân vùng chính đều có một boot sector của riêng nó.
-![Hình ảnh không tìm thấy](http://sv1.upsieutoc.com/2016/11/19/struct.png)
+![Hình ảnh không tìm thấy](https://github.com/TheEEs/linux-admin/blob/master/images/4.1.2.png?raw=true)
 
 ### 4.7.2. Các loại phân vùng.
 Bảng phân vùng (cái thứ nằm trong MBR, một cái khác cũng nằm ở phân bùng mở rộng) , trong đó mỗi phân vùng có một byte trong bảng phân vùng để xác định phân vùng đó thuộc loại gì. Byte này có thể dùng để xác định hệ điều hành nằm trên phân vùng, hoặc mục đích mà phân vùng đuợc tạo ra. Nguyên nhân mà các byte này tồn tại, đó là để tránh khỏi việc có hai hệ điều hành vô tình cùng nằm trên một phân vùng. Tuy nhiên trong thực tế, các hệ điều hành thực sự chẳng mấy quan tâm tới những byte đó. Tệ hơn nữa, một vài hệ điều hành thì còn không sử dụng các byte này đúng cách, một vài phiên bản của DR-DOS bỏ qua các bit tín hiệu quan trọng trong byte này. Không có một sự chuẩn hóa nào giúp xác định các byte sẽ mang ý nghĩa gì, nhưng theo Linux , đây là một danh sách các loại phân vùng đuợc liệt kê bằng chương trình *fdisk*:
@@ -216,7 +216,7 @@ Trước khi một phân vùng hoặc một đĩa có thể đuợc sử dụng 
 Hầu hết các UNIX filesystem có một cấu trúc tương đương hoặc gần tương đương nhau, mặc dù những chi tiết đôi khi sẽ khác nhau một chút. Những khái niệm trung tâm mà chúng ta sẽ nhắc tới sau đây bao gồm :*superblock, inode, data block, directory block và indirection block*. *Superblock* chứa thông tin về thứ gì đó liên quan đến toàn bộ filesystem, như kích thước chẳng hạn (thông tin có chính xác hay không sẽ phụ thuộc vào filesystem). Một *inode* chứa tất cả các thông tin về một file, ngoại trừ tên của nó. Tên file đuợc lưu trong thư mục, cùng với chỉ số của inode. Mỗi một entry trong một thư mục chứa tên file và chỉ số của inode đại diện cho file đó. *inode* chứa chỉ số của các *data blocks* , thứ đuợc dùng để lưu trữ nội dung của một file. *inode* dành ra một không gian chứa đuợc một số lượng ít các chỉ số của các data blocks. Nhưng nếu cần thiết , nhiều không gian hơn sẽ đuợc cấp phát động (*dynamically*) , không gian đuợc cấp phát động này đuợc gọi là các *indirect blocks* , chứa các con trỏ trỏ tới các data blocks. Không gian ấy chứa những *indirection blocks*, đúng như cái tên, khi muốn tìm các data block , đầu tiên bạn cần phải tìm chỉ số của data block đó trong indirection block tương ứng. Cấu trúc của một inode được mô tả như dưới hình:
 
 	
-![Hình ảnh không tìm thấy](http://sv1.upsieutoc.com/2017/08/25/Untitled20ea3.png)
+![Hình ảnh không tìm thấy](https://github.com/TheEEs/linux-admin/blob/master/images/inode.png?raw=true)
 
 Các UNIX filesystem thường cho phép tạo ra một cái *lỗ - hole* trong một file. Điều đó có nghĩa là filesystem sẽ giả vờ rằng một vị trí cụ thể nào đó trong file chỉ là những byte 0 , nhưng không có sector nào đuợc dành cho vị trí đó trong file cả. Như vậy về cơ bản, file sẽ chiếm ít không gian lưu trữ hơn. Cách này đặc biệt thường đuợc áp dụng với các chương trình nhỏ , các Linux shared libraries , một vài cơ sở dữ liệu, và trong một số trường hợp đặc biệt khác. *Holes* đuợc triển khai bằng cách lưu trữ một giá trị đặc biệt như địa chỉ của một data block, vào một indirection block hoặc inode. Điều đó có nghĩa là không một sectors nào đựoc cấp phát cho phần đó của file , khi đó phần ảo ấy đuợc gọi là một cái *lỗ* .
 
@@ -334,9 +334,9 @@ Kích thước của block cũng có thể ảnh hưởng tới kích thước f
 
 ### 4.8.5. So sánh các filesystem.
 Bảng dưới đây so sánh các tính năng có trong các filesystem phổ biến/cận phổ biến.
-![Hình ảnh không thể tìm thấy](http://sv1.upsieutoc.com/2016/11/20/tablex.png)
+![Hình ảnh không thể tìm thấy](https://github.com/TheEEs/linux-admin/blob/master/images/4.1.3.png?raw=true)
 Bảng dưới đây liệt kê ra các đơn vị đo lường thông tin trong máy tính hay đuợc sử dụng
-![Hình ảnh không thể tìm thấy](http://sv1.upsieutoc.com/2016/11/20/size.png)
+![Hình ảnh không thể tìm thấy](https://github.com/TheEEs/linux-admin/blob/master/images/4.1.4.png?raw=true)
 Bạn nên lưu ý rằng kích thước file rất hiếm khi lên tới các đơn vị Exabytes, Zettabytes và Yottabytes, mặc dù trong một vài trường hợp đặc biệt, chúng có thể.
 
 > Link bài viết tiếp theo [\[Series\] Linux System Administrator's guide. \[Phần 4.2\]](https://kipalog.com/posts/Series--Linux-System-Administrator-s-guide---Phan-4-2).
