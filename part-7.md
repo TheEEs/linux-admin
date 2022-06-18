@@ -91,7 +91,7 @@ Hầu hết các hệ thống Linux chạy lênh *shutdown -r now* khi tổ hợ
 
 ## 7.5. Chế độ đơn người dùng - single user mode.
 Lệnh **shutdown** cũng có thể được sử dụng để đưa hệ thống xuống thành một hệ thống chạy ở chế độ đơn người dùng, trong đó không một ai có thể login, nhưng người dùng root có thể sử dụng console. Điều này hữu dụng trong các tình huống đặc biệt, khi mà hoạt động quản trị không thể hoàn thành trong khi hệ thống chạy bình thường.
-##7.6. Các đĩa mềm khởi động khẩn cấp.
+## 7.6. Các đĩa mềm khởi động khẩn cấp.
 Không phải lúc nào bạn cũng có khả năng boot từ đĩa cứng. Ví dụ , nếu như bạn phạm phải sai lầm nào  đó khi cấu hình LILO, bạn có thể khiến cho hệ thống trở nên không thể boot được. Trong tình huống này , bạn cần một phương pháp booting thay thế mà luôn luôn hoạt động. Với các máy tính cá nhân điển hình, điều đó có nghĩa là bạn nên boot từ một ổ đĩa mềm , đĩa CD hoặc sử dụng một phương tiện boot nào đó khác.
 Hầu hết các bản phân phối Linux đều cho phép người dùng tạo ra một đĩa boot khẩn cấp trong quá trình cài đặt. Sẽ là một ý tưởng tốt cho bạn để làm điều đó. Tuy nhiên, một vài đĩa boot chỉ chứa kernel. Giả sử rằng bạn sẽ sử dụng những chương trình trên đĩa cài đặt của bản phân phối đó, để sửa chữa bất kỳ vấn đề nào mà bạn có. Đôi khi những chương trình có sẵn là không đủ để đáp ứng nhu cầu của bạn. Ví dụ đôi khi bạn sẽ cần phải khôi phục một vài file, nhưng những chương trình hỗ trợ để làm điều đó lại không có sẵn trên đĩa cứu hộ mà bạn có. 
 
